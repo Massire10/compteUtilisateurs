@@ -61,7 +61,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public List<AppUser> listUsers() {
-
+        // on obtient la liste des utilisateurs
         return appUserRepository.findAll();
     }
 }

@@ -42,7 +42,11 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public void addRoleToUser(String username, String roleName) {
+
+        // On obtient l'utilisateur par son nom
         AppUser appUser = appUserRepository.findByUsername(username);
+
+        // On obtient l'utilisateur par son rôle
         AppRole appRole = appRoleRepository.findByRoleName(roleName);
         // On ajoute le role aux utilisateurs
         appUser.getAppRoles().add(appRole);
